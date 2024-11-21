@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Provide cop_name
+#
+# > bin/new-cop Jackpocket/MyCustomCop
+
+require "bundler/setup"
+require "rubocop"
+
+cop_name = ARGV[0]
+
+if cop_name.nil? || !cop_name.match?(/Jackpocket\/[A-Za-z]*/)
+  puts "Error: Missing or invalid cop name."
+  puts "Usage: bin/new-cop Jackpocket/MyCustomCop"
+  exit
+end
+
+generator = RuboCop::Cop::Generator.new(cop_name)
+
+generator.write_source
+generator.write_spec
+generator.inject_require(root_file_path: 'lib/rubocop/cop/jackpocket_cops.rb')
+generator.inject_config(config_file_path: 'config/default.yml')
+
+puts generator.todo

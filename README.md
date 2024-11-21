@@ -8,9 +8,8 @@ Add `rubocop-jackpocket` to your Gemfile.
 
 ## Development
 
-All custom cops are located under [`lib/rubocop/cop/jackpocket`](lib/rubocop/cop/jackpocket).
+Run `bundle install` and then `bundle exec rspec` for setup.
 
-```
-bundle install
-bundle exec rspec
-```
+Generate a new cop with `bin/new-cop Jackpocket/MyCustomCop`.
+
+All custom cops are located under [`lib/rubocop/cop/jackpocket`](lib/rubocop/cop/jackpocket).
