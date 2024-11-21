@@ -10,7 +10,7 @@ require "rubocop"
 
 cop_name = ARGV[0]
 
-if cop_name.nil? || !cop_name.match?(/Jackpocket\/[A-Za-z]*/)
+if cop_name.nil? || !cop_name.match?(/Jackpocket\/[A-Za-z]{3,}/)
   puts "Error: Missing or invalid cop name."
   puts "Usage: bin/new-cop Jackpocket/MyCustomCop"
   exit
