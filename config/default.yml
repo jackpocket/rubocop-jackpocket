@@ -1,1 +1,5 @@
-# Write it!
+# This is the default configuration file.
+
+Jackpocket/SneakersJobControlSignal:
+  Description: "A Sneakers worker work method must return one of three possible job control signals."
+  Enabled: true
