@@ -1,5 +1,5 @@
 # This is the default configuration file.
 
 Jackpocket/SneakersJobControlSignal:
-  Description: "A Sneakers worker work method must return one of three possible job control signals."
+  Description: "A Sneakers `work` method, including `rescue` and `else` bodies, must return an `ack!`, `reject!`, or `requeue!` signal."
   Enabled: true
