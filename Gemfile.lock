@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-jackpocket (0.1.0)
+    rubocop-jackpocket (1.0.0)
       rubocop
 
 GEM

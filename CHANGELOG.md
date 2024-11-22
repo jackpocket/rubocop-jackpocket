@@ -1,5 +1,9 @@
-## [Unreleased]
+# Changelog
 
-## [0.1.0] - 2024-11-21
+## Unreleased
 
-- Initial release
+...
+
+## 1.0.0 - 2024-11-21
+
+- Initial release with Jackpocket/SneakersJobControlSignal cop
