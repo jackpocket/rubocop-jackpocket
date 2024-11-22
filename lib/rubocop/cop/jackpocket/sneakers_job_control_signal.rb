@@ -60,8 +60,14 @@ module RuboCop
           node.each_ancestor(:class, :block).detect { |anc| sneakers_worker?(anc) }
         end
 
-        # We want the node and body in case the body is nil so on adding
-        # an offense we can still provide a node as the location.
+        # We want the node and body in case the body is empty. For example,
+        # this method body would be `nil`. Same for an empty rescue body.
+        #
+        # def work(message)
+        # end
+        #
+        # So then on adding an offense we can provide a node in place of
+        # the body as the location when the body is empty.
         def resbody_branches_with_node(rescue_body)
           items = rescue_body.resbody_branches.map do |b|
             { node: b, body: b.body }
