@@ -34,7 +34,7 @@ module RuboCop
           (... (send nil? {:ack! :reject! :requeue!}))
         PATTERN
 
-        MSG = 'The last line in `work` method must be `ack!`, `reject!`, or `requeue!`'.freeze
+        MSG = 'The `work` method must return `ack!`, `reject!`, or `requeue!`'.freeze
 
         def on_def(node)
           return unless node.method?(:work) && in_sneakers_worker?(node)

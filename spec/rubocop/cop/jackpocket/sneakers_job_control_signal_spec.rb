@@ -75,7 +75,7 @@ RSpec.describe RuboCop::Cop::Jackpocket::SneakersJobControlSignal do
               include Sneakers::Worker
 
               def work(message)
-              ^^^^^^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+              ^^^^^^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               end
             end
           RUBY
@@ -92,7 +92,7 @@ RSpec.describe RuboCop::Cop::Jackpocket::SneakersJobControlSignal do
                 do_something
                 #{signal_name}
               rescue SomeError
-              ^^^^^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+              ^^^^^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               end
             end
           RUBY
@@ -107,10 +107,10 @@ RSpec.describe RuboCop::Cop::Jackpocket::SneakersJobControlSignal do
 
               def work(message)
                 do_something
-                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               rescue SomeError
                 handle_error
-                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               end
             end
           RUBY
@@ -131,7 +131,7 @@ RSpec.describe RuboCop::Cop::Jackpocket::SneakersJobControlSignal do
                 #{signal_name}
               else
                 do_else
-                ^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+                ^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               end
             end
           RUBY
@@ -147,7 +147,7 @@ RSpec.describe RuboCop::Cop::Jackpocket::SneakersJobControlSignal do
                 #{signal_name}
               rescue SomeError
                 handle_error
-                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               else
                 do_else
                 #{signal_name}
@@ -166,10 +166,10 @@ RSpec.describe RuboCop::Cop::Jackpocket::SneakersJobControlSignal do
                 #{signal_name}
               rescue SomeError
                 handle_error
-                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+                ^^^^^^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               else
                 do_else
-                ^^^^^^^ Jackpocket/SneakersJobControlSignal: The last line in `work` method must be `ack!`, `reject!`, or `requeue!`
+                ^^^^^^^ Jackpocket/SneakersJobControlSignal: The `work` method must return `ack!`, `reject!`, or `requeue!`
               end
             end
           RUBY
