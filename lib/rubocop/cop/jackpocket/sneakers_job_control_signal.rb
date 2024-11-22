@@ -4,6 +4,9 @@ module RuboCop
   module Cop
     module Jackpocket
       class SneakersJobControlSignal < Base
+        # Re-purposed the rubocop-sidekiq def_node_matchers for Sneakers since we need
+        # to ensure the class has `include Sneakers::Worker` and not just a `work` method.
+        # https://github.com/dvandersluis/rubocop-sidekiq/blob/master/lib/rubocop/cop/helpers.rb
         def_node_matcher :sneakers_include?, <<~PATTERN
           (send nil? :include (const (const nil? :Sneakers) :Worker))
         PATTERN
