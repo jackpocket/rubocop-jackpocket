@@ -1,0 +1,37 @@
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 3.4
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - .git/**/*
+    - bin/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/* # avoid running Rubocop in GHA ruby/setup-ruby on vendored dependencies!
+    - .github/**/*
+Bundler:
+  Enabled: true
+Gemspec:
+  Enabled: true
+Layout:
+  Enabled: true
+Lint:
+  Enabled: true
+Metrics:
+  Enabled: false
+Naming:
+  Enabled: true
+Security:
+  Enabled: true
+Style:
+  Enabled: true
+
+Naming/FileName:
+  Exclude:
+    - lib/rubocop-jackpocket.rb
+
+Style/Documentation:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
