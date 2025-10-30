@@ -42,7 +42,7 @@ module RuboCop
           def_body = node.body
 
           items = if def_body && def_body.type == :rescue
-                    [{ node: node, body: def_body.body}, *resbody_branches_with_node(def_body)]
+                    [{ node: node, body: def_body.body }, *resbody_branches_with_node(def_body)]
                   else
                     [{ node: node, body: def_body }]
                   end
