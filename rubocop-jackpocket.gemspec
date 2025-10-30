@@ -13,6 +13,10 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.4.0'
   spec.files = Dir['README.md', 'LICENSE.txt', 'config/*.yml', 'lib/**/*.rb']
-  spec.add_dependency 'rubocop'
-  spec.metadata['rubygems_mfa_required'] = 'true'
+  spec.add_dependency 'lint_roller', '~> 1.1'
+  spec.add_dependency 'rubocop', '~> 1.81'
+  spec.metadata = {
+    'rubygems_mfa_required' => 'true',
+    'default_lint_roller_plugin' => 'RuboCop::Jackpocket::Plugin'
+  }
 end
