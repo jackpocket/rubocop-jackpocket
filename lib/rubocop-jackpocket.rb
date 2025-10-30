@@ -8,4 +8,5 @@ require_relative 'rubocop/jackpocket/inject'
 
 RuboCop::Jackpocket::Inject.defaults!
 
+require_relative 'rubocop/cop/jackpocket/sneakers_base'
 require_relative 'rubocop/cop/jackpocket_cops'
