@@ -14,4 +14,5 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.0.0'
   spec.files = Dir['README.md', 'LICENSE.txt', 'config/*.yml', 'lib/**/*.rb']
   spec.add_dependency 'rubocop'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
