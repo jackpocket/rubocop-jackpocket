@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description = "Code style checking for Jackpocket's Ruby projects."
   spec.homepage = 'https://github.com/jackpocket/rubocop-jackpocket'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.0.0'
+  spec.required_ruby_version = '>= 3.4.0'
   spec.files = Dir['README.md', 'LICENSE.txt', 'config/*.yml', 'lib/**/*.rb']
   spec.add_dependency 'rubocop'
   spec.metadata['rubygems_mfa_required'] = 'true'
