@@ -3,3 +3,7 @@
 Jackpocket/SneakersJobControlSignal:
   Description: "A Sneakers `work` method, including `rescue` and `else` bodies, must return an `ack!`, `reject!`, or `requeue!` signal."
   Enabled: true
+
+Jackpocket/SneakersNoInstanceVariable:
+  Description: "A Sneakers class must not use instance variables."
+  Enabled: true
