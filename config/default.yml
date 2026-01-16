@@ -7,3 +7,13 @@ Jackpocket/SneakersJobControlSignal:
 Jackpocket/SneakersNoInstanceVariable:
   Description: "A Sneakers class must not use instance variables."
   Enabled: true
+
+Jackpocket/NoBugsnagNotify:
+  Description: "Replace Bugsnag references with our ErrorReporter class."
+  Enabled: true
+  Exclude:
+    - bin/bugsnag-console
+    - config/initializers/bugsnag.rb
+    - lib/error_reporter.rb
+    - spec/lib/error_reporter_spec.rb
+    - spec/controllers/application_controller_spec.rb
